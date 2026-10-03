@@ -1,6 +1,8 @@
 # Cisco L2 Security & Redundancy Lab
 
 ![Cisco Packet Tracer](https://img.shields.io/badge/Cisco%20Packet%20Tracer-9.0.1-1BA0D7?logo=cisco&logoColor=white)
+![Networking](https://img.shields.io/badge/Networking-Layer%202-2F80ED)
+![Network Security](https://img.shields.io/badge/Network%20Security-Layer%202%20Security-6C5CE7)
 
 A hands-on **Cisco Packet Tracer networking project** focused on Layer 2 security, redundancy, and reliable network connectivity. The lab implements VLAN segmentation, LACP EtherChannel, Rapid PVST+, Port Security, BPDU Guard, DHCP Snooping, and Dynamic ARP Inspection (DAI), with configuration validated through Cisco IOS CLI verification.
 
