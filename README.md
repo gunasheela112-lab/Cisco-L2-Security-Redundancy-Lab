@@ -1,5 +1,7 @@
 # Cisco L2 Security & Redundancy Lab
 
+![Cisco Packet Tracer](https://img.shields.io/badge/Cisco%20Packet%20Tracer-9.0.1-1BA0D7?logo=cisco&logoColor=white)
+
 A hands-on **Cisco Packet Tracer networking project** focused on Layer 2 security, redundancy, and reliable network connectivity. The lab implements VLAN segmentation, LACP EtherChannel, Rapid PVST+, Port Security, BPDU Guard, DHCP Snooping, and Dynamic ARP Inspection (DAI), with configuration validated through Cisco IOS CLI verification.
 
 ## Project Highlights
@@ -40,7 +42,7 @@ Two Cisco switches are connected through a two-link LACP EtherChannel. End devic
 
 Two physical links between the switches are bundled into `Port-channel1` using LACP.
 
-![LACP EtherChannel](lacp-etherchannel.png.png)
+![LACP EtherChannel](lacp-etherchannel.png)
 
 Verified with:
 
@@ -58,7 +60,7 @@ Po1(SU)   LACP   Fa0/23(P) Fa0/24(P)
 
 Rapid PVST+ provides loop prevention and Layer 2 redundancy. Switch0 is configured as the STP root bridge for VLAN 10 with a priority of 4096.
 
-![Rapid PVST+](rapid-pvst-stp.png.png)
+![Rapid PVST+](rapid-pvst-stp.png)
 
 Verified using:
 
@@ -76,13 +78,13 @@ User-facing access ports use:
 - PortFast
 - BPDU Guard
 
-![Port Security](port%20security.png.png)
+![Port Security](port-security.png)
 
 ### DHCP Snooping & Dynamic ARP Inspection
 
 DHCP Snooping and DAI were configured and verified on the primary switch for VLAN 10. The DHCP Snooping binding table records a dynamically learned client address, while DAI is confirmed enabled and active for VLAN 10.
 
-![DHCP Snooping and DAI](dhcp-snooping-dai.png.png)
+![DHCP Snooping and DAI](dhcp-snooping-dai.png)
 
 **Packet Tracer implementation note:** DHCP Snooping on the second switch caused PC1 DHCP allocation to fail in this specific topology despite the EtherChannel and physical uplinks being correctly configured and trusted. To maintain a fully functional lab, DHCP Snooping and DAI were retained on the switch where they could be successfully verified, while the second switch uses the other Layer 2 security controls.
 
@@ -90,7 +92,7 @@ DHCP Snooping and DAI were configured and verified on the primary switch for VLA
 
 PC1 successfully obtained a DHCP address and communicated with the server.
 
-![DHCP and Connectivity](dhcp%20connectivity.png.png)
+![DHCP and Connectivity](dhcp-connectivity.png)
 
 Example verification:
 
